@@ -1,0 +1,31 @@
+version: '3.9'
+
+services:
+  app:
+    build:
+      dockerfile: ./php/Dockerfile
+    container_name: app
+    restart: always
+    working_dir: /app/public
+    volumes:
+      - ./app:/app
+
+  web:
+    image: nginx:latest
+    container_name: websever
+    restart: always
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/conf.d/default.conf:/etc/nginx/conf.d/default.conf
+      - ./app:/app
+  db:
+    container_name: database
+    image: mysql:8.0.31
+    volumes:
+      - ./storage/mysql:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "3306:3306"

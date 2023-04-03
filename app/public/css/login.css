@@ -1,0 +1,177 @@
+/* Start Styling the login page */
+
+.login-section {
+    display: flex;
+    justify-content: space-between;
+    min-height: 95vh;
+    background-color: #f2f2f2;
+    color: var(--secondary-color);
+}
+
+.login-section .text {
+    flex-basis: 50%
+}
+
+.login-section .text .main-heading {
+    margin: 50% auto auto;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    border-bottom: 3px solid #fff;
+    width: calc(100% - 100px);
+}
+
+.login-section .text .main-heading span {
+    display: block;
+}
+
+.login-section .text .main-heading span:last-of-type {
+    color: #333;
+}
+
+.login-section .login {
+    flex-basis: 40%;
+    padding: 47px;
+    height: fit-content;
+    margin: 7rem auto auto;
+    background-color: white;
+    border: none;
+    box-shadow: 0 0 3px #aaa;
+    border-radius: 10px;
+
+    transition: .3s;
+}
+
+.login-section .login:hover {
+    box-shadow: 0 0 10px #777;
+}
+
+.login-section .login h3 {
+    color: var(--secondary-color);
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin: 0 0 50px;
+    width: 80%;
+}
+
+.login-section .login h4 {
+    color: var(--secondary-color);
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin: 0 0 25px;
+    width: 80%;
+}
+
+.login-section .login p:first-of-type {
+    color: #779;
+    margin: 0 0 40px;
+    width: 80%;
+}
+
+.login-section .login form {
+    width: 80%;
+
+}
+
+.login-section .login form label {
+    color: #444;
+}
+
+.login-section .login form input:not([type='checkbox']) {
+    display: block;
+    margin: 5px 0 20px;
+    width: 100%;
+    height: 3rem;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+
+.login-section .login form input:not([type='checkbox']):nth-last-of-type(2) {
+    margin-bottom: 7px;
+}
+
+.login-section .login form input[type='checkbox'] {
+    margin-bottom: 20px;
+}
+
+.login-section .login form a {
+    float: right;
+    text-decoration: none;
+    color: cornflowerblue;
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+}
+
+.login-section .login form input[type='submit'] {
+    background-color: var(--main-color);
+    color: white;
+    margin-bottom: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.login-section .login p:last-of-type {
+    color: #779;
+    margin-left: 20px;
+    width: 80%;
+
+}
+
+.login-section .login p:last-of-type a {
+    text-decoration: none;
+    color: cornflowerblue;
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+}
+
+.login-section .login form a:hover,
+.login-section .login p:last-of-type a:hover {
+    color: var(--main-color);
+}
+
+
+@media (max-width: 767px) {
+    .login-section {
+        min-height: 75vh;
+    }
+    
+    .login-section .text {
+        display: none;
+        flex-basis: 0;
+    }
+
+    .login-section .login {
+        width: 100%;
+        padding: 24px;
+        margin: 2rem auto;
+        flex-basis: 90%;
+    }
+
+    .login-section .login form {
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    .login-section .login p:first-of-type {
+        margin: 0 0 10px;
+    }
+
+    .login-section .login p:last-of-type {
+        width: 100%;
+    }
+}
+/* End Styling the login page */

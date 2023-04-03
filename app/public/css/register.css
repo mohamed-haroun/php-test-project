@@ -1,0 +1,178 @@
+/* Start styling the register section */
+
+.register {
+    display: flex;
+    justify-content: space-between;
+}
+
+.register .text-section {
+    flex-basis: 50%;
+    color: var(--secondary-color);
+    background-image: linear-gradient(to bottom, #ccc 30%, white);
+}
+
+@media (max-width: 767px) {
+    .register .text-section {
+        display: none;
+    }
+}
+
+.register .text-section .main-heading {
+    width: 80%;
+    transform: translateY(18rem);
+    -webkit-transform: translateY(18rem);
+    -moz-transform: translateY(18rem);
+    -ms-transform: translateY(18rem);
+    -o-transform: translateY(18rem);
+}
+
+.register .text-section .main-heading span {
+    display: block;
+}
+
+/* styling the registration form */
+
+.register .form-section {
+    flex-basis: 50%;
+    padding: 3rem 5rem;
+}
+
+/* Failed Message */
+.register .form-section p.message {
+    color: white;
+    background-color: rgba(255, 99, 71, 0.616);
+    text-align: center;
+    width: 25rem;
+    padding: 15px;
+}
+
+.register .form-section p {
+    margin-bottom: 20px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.register .form-section a {
+    text-decoration: none;
+    color: #0081C9;
+}
+
+.register .form-section a:hover {
+    color: var(--main-color);
+}
+
+.register .form-section .text h4 {
+    color: var(--secondary-color);
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+}
+
+.register .form-section .text p:first-of-type {
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Styling the registration form */
+.register .form-section form {
+    width: 80%;
+}
+
+.register .form-section form label {
+    display: inline-block;
+    margin-bottom: 5px;
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+.register .form-section form input:not([type='radio'], [type='checkbox']) {
+    display: block;
+    color: var(--secondary-color);
+    width: 25rem;
+    height: 2.6rem;
+    padding-left: .5rem;
+    margin-bottom: 15px;
+    border: 1px solid #999;
+    outline: none;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+
+.register .form-section form .name {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.register .form-section form .name input {
+    width: 12rem;
+}
+
+.register .form-section form .name input:first-of-type {
+    margin-right: 1rem;
+}
+
+.register .form-section form .gender {
+    margin: 10px 0;
+}
+
+.register .form-section form input[type='radio'], 
+.register .form-section form input[type='checkbox']{
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+
+.register .form-section form input[type='submit'] {
+    background-color: var(--main-color);
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-color: var(--main-color);
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+}
+
+.register .form-section form input[type='submit']:hover {
+    color: white;
+    background-color: cornflowerblue;
+    border-color: cornflowerblue;
+}
+
+@media (max-width: 767px) {
+    .register .form-section {
+        flex: 1;
+        padding: .5rem;
+        margin: 3rem 1rem;
+        box-shadow: 0 0 10px #999;
+    }
+
+    .register .form-section form {
+        width: 99%;
+    }
+
+    .register .form-section form .name {
+        display: block;
+    }
+
+    .register .form-section form input:not([type='radio'], [type='checkbox']) {
+        width: 100%;
+    }
+
+    .register .form-section form label {
+        display: inline-block;
+        color: var(--secondary-color);
+        font-weight: 400;
+        font-size: 15px;
+    }
+}
+
+/* End styling the register section */

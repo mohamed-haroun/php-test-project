@@ -1,0 +1,27 @@
+{
+    "require": {
+        "vlucas/phpdotenv": "^5.5",
+        "ramsey/uuid": "^4.7",
+        "psr/container": "^2.0",
+        "doctrine/dbal": "^3.6",
+        "doctrine/orm": "^2.14",
+        "symfony/cache": "^6.2"
+    },
+
+    "autoload": {
+        "psr-4": {
+            "boot\\": "boot/",
+            "router\\": "router/",
+            "exceptions\\": "exceptions/",
+            "controllers\\": "controllers/",
+            "views\\": "views/",
+            "models\\": "models/",
+            "enums\\": "enums/",
+            "invoices\\": "invoices/",
+            "container\\": "container/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    }
+}

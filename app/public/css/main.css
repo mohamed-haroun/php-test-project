@@ -1,0 +1,438 @@
+/* Start global styling */
+/* Variables of the page */
+:root {
+    --main-color: #f7444e;
+    --secondary-color: #002c3e;
+    --transparent-color: rgba(15, 116, 143, 70%);
+    --section-padding: 100px;
+}
+
+
+/* The wildcard style that affects all elements */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+/* The smooth behavior of the scroll bars */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.container {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-heading {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.main-heading h2 {
+    font-weight: 700;
+}
+
+.main-heading h2 span {
+    color: var(--main-color);
+}
+
+.main-heading::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 5px;
+    background: #f7444e;
+    margin: 10px auto 10px;
+}
+
+/* Removing the styling of the ul elements */
+ul {
+    list-style-type: none;
+}
+
+/* Styling the media queries thet makes the site resposive */
+
+/* For small screens and tablets */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* For medium screens */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* For large screens */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/* End global styling */
+
+/* Styling the header of the page */
+
+header {
+    position: relative;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: whitesmoke;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    min-height: 3rem;
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    background-color: var(--secondary-color);
+    width: 100%;
+}
+
+header .logo {
+    flex-basis: 30%;
+}
+
+header .logo h1 {
+    font-weight: 600;
+    font-size: 40px;
+    color: var(--secondary-color);
+}
+
+header .logo h1::first-letter {
+    color: var(--main-color);
+}
+
+header .container nav {
+    display: block;
+    flex-basis: 50%;
+    height: 100%;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+header nav ul a {
+    display: block;
+    height: 100%;
+    padding: 2.5rem 1.2rem;
+    text-align: center;
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-size: 1rem;
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+    transition: .3s;
+    position: relative;
+    z-index: 2;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+}
+
+header nav ul a.active,
+header nav ul a:hover {
+    color: var(--main-color);
+    border-bottom: 2px solid var(--main-color);
+}
+
+header .search {
+    flex-basis: 10%;
+}
+
+header .search form {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+header .search form button {
+    width: fit-content;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+header .search form i {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    padding: 7px;
+}
+
+header .search form i:hover {
+    color: var(--main-color);
+}
+
+header .search form input {
+    background-color: transparent;
+    width: 2rem;
+    padding: 7px;
+    outline: none;
+    border: none;
+    border-left: 1px solid #ccc;
+    caret-color: var(--secondary-color);
+    transition: .4s;
+    -webkit-transition: .4s;
+    -moz-transition: .4s;
+    -ms-transition: .4s;
+    -o-transition: .4s;
+}
+
+header .container i.bars {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    header .container {
+        position: relative;
+    }
+
+    header .container i.bars {
+        display: block;
+        font-size: 1.7rem;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #222;
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+    }
+
+
+    header .container nav {
+        position: absolute;
+        top: 100px;
+        left: 0;
+        height: auto;
+        display: none;
+        width: 100%;
+        background-color: rgba(0, 0, 0, .8);
+        color: white;
+        z-index: 2;
+    }
+
+    header nav ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-bottom: 20px;
+    }
+
+    header nav ul li {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    header nav ul li a {
+        padding: 10px 30px;
+        text-align: left;
+        color: white;
+        border: none;
+    }
+
+    header .container i.bars:hover + nav {
+        display: block;
+    }
+
+    header .search {
+        position: relative;
+        right: 40px;
+    }
+
+    header .search form input:focus {
+        max-width: 150px;
+        border-radius: 20px;
+        padding-left: 15px;
+        caret-color: var(--main-color);
+    }
+
+    header .search form input:focus + i {
+        color: red;
+    }
+
+}
+
+
+
+/* styling footer section */
+
+footer {
+    min-height: 350px;
+    margin-bottom: 20px;
+    position: relative;
+    background-color: #d4ced0;
+    padding-top: 30px;
+}
+
+footer .container {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    column-gap: 50px;
+}
+
+footer .container .info {
+    margin: 0 10px;
+}
+
+footer .info .logo h1 {
+    font-weight: 600;
+    font-size: 40px;
+    color: var(--secondary-color);
+    margin: 0 auto;
+}
+
+footer .info .logo h1::first-letter {
+    color: var(--main-color);
+}
+
+footer .info .data {
+    margin: 30px auto;
+}
+
+footer .info .data p {
+    line-height: 1.5;
+    font-size: 1rem;
+    margin-bottom: 18px;
+}
+
+footer .info .data p span {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+footer .container .links {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+footer .site-map {
+    margin: 0 auto;
+}
+
+footer .site-map h4,
+footer .newsletter h4 {
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+}
+
+footer .site-map li {
+    margin-bottom: 20px;
+}
+
+footer .site-map li a {
+    text-decoration: none;
+    color: #333;
+}
+
+footer .site-map li a:hover {
+    color: var(--main-color);
+}
+
+footer .newsletter p {
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+footer .newsletter form {
+    display: flex;
+    justify-content: flex-start;
+}
+
+footer .newsletter form input {
+    display: block;
+    height: 3rem;
+    padding: 10px;
+    outline: none;
+}
+
+footer .newsletter form input[type='email'] {
+    border: 1px solid #aaa;
+    border-right: none;
+}
+
+footer .newsletter form input[type='submit'] {
+    border: 1px solid var(--main-color);
+    border-left: none;
+    color: white;
+    background-color: var(--main-color);
+}
+
+footer .copy {
+    position: relative;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    padding: 40px;
+    margin-top: 100px;
+    background-color: #222;
+    color: white;
+}
+
+footer .copy a {
+    text-decoration: none;
+    color: var(--main-color);
+}
+
+@media (max-width: 992px) {
+
+    footer .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer .container .info {
+        margin: 0 0 30px;
+    }
+
+    footer .container .links {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    footer .container  .newsletter {
+        margin-top: 30px;
+        text-align: left;
+    }
+
+}
+
+/* End styling footer section */
